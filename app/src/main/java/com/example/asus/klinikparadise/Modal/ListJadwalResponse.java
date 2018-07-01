@@ -11,10 +11,10 @@ public class ListJadwalResponse {
     public List<Jadwal> data;
 
     public class Jadwal{
-        public int id_jadwal;
-        public String shift_praktek;
-        public String hari_praktek;
-        public String jam_praktek;
+        public int id_jadwalklinik;
+        public String shift_klinik;
+        public String jam_buka;
+        public String jam_tutup;
     }
 
 }

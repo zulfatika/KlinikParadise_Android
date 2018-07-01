@@ -79,7 +79,7 @@
                 android:layout_height="match_parent"
                 app:srcCompat="@drawable/delete"
                 android:background="#ffff"
-                android:id="@+id/buttonDetail"
+                android:id="@+id/btnDelete"
                 android:layout_weight="1"
                 android:layout_marginRight="20dp"/>
         </LinearLayout>

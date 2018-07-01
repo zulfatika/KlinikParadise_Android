@@ -6,6 +6,8 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageButton;
 
 import com.example.asus.klinikparadise.R;
 
@@ -14,12 +16,9 @@ import com.example.asus.klinikparadise.R;
  */
 
 public class RiwayatFragment extends Fragment {
+    ImageButton btnDelete;
     private View view;
     private RecyclerView recyclerView;
-
-    public RiwayatFragment(){
-
-    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -32,6 +31,7 @@ public class RiwayatFragment extends Fragment {
         }
 
         recyclerView = (RecyclerView)view.findViewById(R.id.recycle);
+        btnDelete   = (ImageButton) view.findViewById(R.id.btnDelete);
 
         return view;
     }
