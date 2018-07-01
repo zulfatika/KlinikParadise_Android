@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_register"
+    android:background="@android:color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.asus.klinikparadise.Activity.RegisterActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="20dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/logo" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="KLINIK PARADISE"
+                android:textSize="24dp"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:gravity="center"/>
+
+            <LinearLayout
+                android:layout_width="300dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="13dp"
+                android:orientation="vertical"
+                android:paddingBottom="8dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="4dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imageView1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/username1" />
+
+                    <EditText
+                        android:id="@+id/editName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:ems="10"
+                        android:hint="Nama Pasien"
+                        android:inputType="textPersonName"
+                        android:textColor="#909090"
+                        android:textColorHint="#909090" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/passw" />
+
+                    <EditText
+                        android:id="@+id/editPassword"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:ems="10"
+                        android:layout_gravity="center"
+                        android:hint="Password"
+                        android:inputType="textPassword"
+                        android:textColor="#909090"
+                        android:textColorHint="#909090" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="4dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imageView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/nocard" />
+
+                    <EditText
+                        android:id="@+id/editNik"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:ems="10"
+                        android:layout_gravity="center"
+                        android:hint="NIK"
+                        android:inputType="textPersonName"
+                        android:textColor="#909090"
+                        android:textColorHint="#909090" />
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="4dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imageView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/tempatlhr" />
+
+                    <EditText
+                        android:id="@+id/editTempatLhr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:ems="10"
+                        android:hint="Tempat Lahir"
+                        android:inputType="textPersonName"
+                        android:textColor="#909090"
+                        android:textColorHint="#909090" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="4dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imageView5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/tgllhr" />
+
+                    <TextView
+                        android:id="@+id/tglLhr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:textSize="18sp"
+                        android:background="@android:color/transparent"
+                        android:ems="10"
+                        android:hint="Tanggal Lahir"
+                        android:inputType="textPersonName"
+                        android:textColor="#909090"
+                        android:textColorHint="#909090" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="4dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imageView8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/kelamin" />
+
+                    <TextView
+                        android:id="@+id/jnsKelamin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:ems="10"
+                        android:text="Jenis Kelamin"
+                        android:textSize="18sp"
+                        android:inputType="textPersonName"
+                        android:textColor="#909090"/>
+                </LinearLayout>
+
+                <RadioGroup
+                    android:id="@+id/radiogroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/klmnP"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:text="Perempuan"
+                        android:textSize="18sp"
+                        android:layout_marginLeft="35dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:textColor="#909090"/>
+
+                    <RadioButton
+                        android:id="@+id/klmnL"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="Laki-laki"
+                        android:textSize="18sp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:textColor="#909090"/>
+                </RadioGroup>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="4dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imageView6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/location" />
+
+                    <EditText
+                        android:id="@+id/editAlamat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:ems="10"
+                        android:hint="Alamat"
+                        android:inputType="textPersonName"
+                        android:textColor="#909090"
+                        android:textColorHint="#909090" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="4dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imageView7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/telp" />
+
+                    <EditText
+                        android:id="@+id/editNoTelp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:ems="10"
+                        android:layout_gravity="center"
+                        android:hint="Nomor Telepon"
+                        android:inputType="textPersonName"
+                        android:textColor="#909090"
+                        android:textColorHint="#909090" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="4dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imageView9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/username1" />
+
+                    <EditText
+                        android:id="@+id/editRiwayat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:ems="10"
+                        android:hint="Riwayat Alergi"
+                        android:inputType="textPersonName"
+                        android:textColor="#909090"
+                        android:textColorHint="#909090" />
+                </LinearLayout>
+            </LinearLayout>
+            <Button
+                android:id="@+id/btnRegister"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/yellow_round"
+                android:layout_alignBottom="@+id/editRiwayat"
+                android:text="Daftar"
+                android:textSize="17dp"/>
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:elevation="@dimen/cardview_default_elevation"
+    android:id="@+id/item_visit"
+    android:clickable="false">
+
+    <LinearLayout
+        android:id="@+id/item_riwayat"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_marginBottom="7dp"
+        android:clickable="true"
+        android:orientation="horizontal"
+        android:background="@android:color/white">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:orientation="vertical"
+            android:weightSum="3"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/textTgl"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="27-01-2018"
+                android:gravity="fill"
+                android:textSize="15sp"
+                android:layout_marginLeft="15dp"/>
+
+            <TextView
+                android:id="@+id/textPoli"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="fill"
+                android:layout_marginLeft="15dp"
+                android:text="Poli Umum"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/textJadwal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="fill"
+                android:layout_marginLeft="15dp"
+                android:text="Siang"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:weightSum="2"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/textStatus"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="fill"
+                android:text="Selesai Periksa"
+                android:textSize="15sp" />
+
+            <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/delete"
+                android:background="#ffff"
+                android:id="@+id/buttonDetail"
+                android:layout_weight="1"
+                android:layout_marginRight="20dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
