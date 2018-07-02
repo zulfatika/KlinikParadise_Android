@@ -31,6 +31,7 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     //compile 'com.google.android.gms:play-services-appindexing:11.0.4'
+    //noinspection GradleCompatible
     compile 'com.android.support:appcompat-v7:27.0.1'
     compile 'com.android.support:support-v4:27.0.1'
     compile 'com.android.support:design:27.0.1'
@@ -43,5 +44,7 @@ dependencies {
     compile 'com.google.android.gms:play-services:11.0.4'
     compile 'com.squareup.okhttp3:logging-interceptor:3.10.0'
     testCompile 'junit:junit:4.12'
+    compile 'com.facebook.stetho:stetho:1.4.2'
+    compile 'com.facebook.stetho:stetho-okhttp3:1.4.2'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.7.0'
 }

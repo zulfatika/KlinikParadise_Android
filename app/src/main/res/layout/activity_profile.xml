@@ -21,12 +21,57 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:text="No. Kartu Pasien"
+                android:textSize="16sp"
+                android:paddingLeft="25dp"
+                android:paddingTop="10dp"/>
+
+            <EditText
+                android:id="@+id/edtNomerKartu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint=""
+                android:textSize="15dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="8dp"
+                android:paddingLeft="12dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="8dp"
+                android:background="@color/cardview_shadow_end_color"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="NIK"
+                android:textSize="16sp"
+                android:paddingLeft="25dp"
+                android:paddingTop="15dp"/>
+
+            <EditText
+                android:id="@+id/edtNIK"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint=""
+                android:textSize="15dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="5dp"
+                android:paddingLeft="12dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:background="@color/cardview_shadow_end_color"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:text="Nama Pasien"
                 android:textSize="16sp"
                 android:paddingLeft="25dp"
                 android:paddingTop="15dp"/>
 
             <EditText
+                android:id="@+id/edtName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint=""
@@ -48,6 +93,7 @@
                 android:paddingTop="10dp"/>
 
             <EditText
+                android:id="@+id/edtAlamat"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint=""
@@ -63,12 +109,35 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TTL"
+                android:text="Tempat Lahir"
                 android:textSize="16sp"
                 android:paddingLeft="25dp"
                 android:paddingTop="10dp"/>
 
             <EditText
+                android:id="@+id/edtTempatLahir"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint=""
+                android:textSize="15dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="5dp"
+                android:paddingLeft="12dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:background="@color/cardview_shadow_end_color"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tanggal Lahir"
+                android:textSize="16sp"
+                android:paddingLeft="25dp"
+                android:paddingTop="10dp"/>
+
+            <TextView
+                android:id="@+id/edtTanggalLahir"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint=""
@@ -90,6 +159,7 @@
                 android:paddingTop="10dp"/>
 
             <EditText
+                android:id="@+id/edtNoTelp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint=""
@@ -102,47 +172,60 @@
                 android:paddingBottom="8dp"
                 android:background="@color/cardview_shadow_end_color"/>
 
-            <TextView
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Jenis Kelamin"
-                android:textSize="16sp"
-                android:paddingLeft="25dp"
-                android:paddingTop="10dp"/>
+                android:layout_height="match_parent"
+                android:layout_marginBottom="4dp"
+                android:orientation="horizontal">
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint=""
-                android:textSize="15dp"
-                android:layout_marginLeft="25dp"
-                android:layout_marginRight="25dp"
-                android:layout_marginTop="8dp"
-                android:paddingLeft="12dp"
-                android:paddingTop="5dp"
-                android:paddingBottom="8dp"
-                android:background="@color/cardview_shadow_end_color"/>
+                <TextView
+                    android:id="@+id/jnsKelamin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="23dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:ems="10"
+                    android:text="Jenis Kelamin"
+                    android:textSize="17sp"
+                    android:inputType="textPersonName"
+                    android:textColor="#909090"/>
+            </LinearLayout>
 
-            <TextView
-                android:layout_width="match_parent"
+            <RadioGroup
+                android:id="@+id/radiogroup"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="No. Kartu Pasien"
-                android:textSize="16sp"
-                android:paddingLeft="25dp"
-                android:paddingTop="10dp"/>
+                android:orientation="horizontal">
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint=""
-                android:textSize="15dp"
-                android:layout_marginLeft="25dp"
-                android:layout_marginRight="25dp"
-                android:layout_marginTop="8dp"
-                android:paddingLeft="12dp"
-                android:paddingTop="5dp"
-                android:paddingBottom="8dp"
-                android:background="@color/cardview_shadow_end_color"/>
+                <RadioButton
+                    android:id="@+id/perempuan"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:text="Perempuan"
+                    android:textSize="18sp"
+                    android:layout_marginLeft="35dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:textColor="#909090"/>
+
+                <RadioButton
+                    android:id="@+id/laki"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="Laki-laki"
+                    android:textSize="18sp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:textColor="#909090"/>
+            </RadioGroup>
 
             <TextView
                 android:layout_width="match_parent"
@@ -153,6 +236,7 @@
                 android:paddingTop="10dp"/>
 
             <EditText
+                android:id="@+id/edtRiwayatAlergi"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint=""
@@ -196,6 +280,15 @@
                     android:layout_marginRight="25dp"
                     android:layout_marginLeft="8dp"/>
             </LinearLayout>
+            <Button
+                android:id="@+id/btnLogout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/yellow_round"
+                android:text="Logout"
+                android:textSize="17dp"
+                android:layout_margin="25dp"/>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 
 import com.example.asus.klinikparadise.Activity.LoginActivity;
-import com.example.asus.klinikparadise.Modal.DaftarAntrianResponse;
 import com.example.asus.klinikparadise.Modal.LoginResponse;
 
 import java.util.HashMap;
@@ -26,7 +25,7 @@ public class PrefManager {
     //private static final String IS_DAFTAR_ANTRIAN = "IsDaftarAntrian";
     public static final String KEY_USER_ID = "user_id";
     public static final String KEY_USER_NAME = "user_name";
-//    public static final String KEY_USER_NOMOR_KARTU = "user_nomor_kartu";
+    public static final String KEY_NIK = "user_nik";
 //    public static final String KEY_USER_TAMBAH_ANTRIAN = "user_tambah_antrian";
 
     public PrefManager(Context context) {
@@ -48,7 +47,8 @@ public class PrefManager {
     //Membuat Login
     public void makeLogin(LoginResponse user){
         editor.putBoolean(IS_LOGIN, true);
-        editor.putString(KEY_USER_ID, user.getNik());
+        editor.putString(KEY_NIK, user.getNik());
+        editor.putString(KEY_USER_ID, user.getId_pasien());
         editor.putString(KEY_USER_NAME, user.getNama_pasien());
         editor.commit();
         mData.insertUserDetails(user);
@@ -67,6 +67,10 @@ public class PrefManager {
 
     public String getIdUser(){
         return pref.getString(KEY_USER_ID, null);
+    }
+
+    public String getKeyNik(){
+        return pref.getString(KEY_NIK, null);
     }
 
     public String getNameUser(){
