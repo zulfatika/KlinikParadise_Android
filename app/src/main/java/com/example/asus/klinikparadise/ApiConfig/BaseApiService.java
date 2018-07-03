@@ -1,17 +1,20 @@
 package com.example.asus.klinikparadise.ApiConfig;
 
-import com.example.asus.klinikparadise.Modal.DaftarAntrianResponse;
 import com.example.asus.klinikparadise.Modal.LIstPoliResponse;
 import com.example.asus.klinikparadise.Modal.ListJadwalResponse;
 import com.example.asus.klinikparadise.Modal.LoginResponse;
+import com.example.asus.klinikparadise.Modal.MessageResponse;
+import com.example.asus.klinikparadise.Modal.ProfileResponse;
 import com.example.asus.klinikparadise.Modal.RegistResponse;
 
-import okhttp3.ResponseBody;
+import okhttp3.RequestBody;
 import retrofit2.Call;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
+import retrofit2.http.Multipart;
 import retrofit2.http.POST;
+import retrofit2.http.Part;
 
 /**
  * Created by Asus on 25/05/2018.
@@ -40,20 +43,38 @@ public interface BaseApiService {
             @Field("riwayat_alergi") String riwayat_alergi
     );
 
+
+    @FormUrlEncoded
+    @POST("updateProfile")
+    public Call<MessageResponse> update_profile(
+            @Field("idProfile") String idProfile,
+            @Field("nama_pasien") String nama_pasien,
+            @Field("tempat_lahir") String tempat_lahir,
+            @Field("tgl_lahir") String tgl_lahir,
+            @Field("alamat") String alamat,
+            @Field("no_telp") String no_telp,
+            @Field("jenis_kelamin") String jenis_kelamin,
+            @Field("riwayat_alergi") String riwayat_alergi
+    );
+
+    @FormUrlEncoded
+    @POST("profile")
+    public Call<ProfileResponse> profile(
+            @Field("idProfile") String idProfile
+    );
+
     @GET("getPoli")
     public Call<LIstPoliResponse> getPoli();
 
     @GET("jadwal")
     public Call<ListJadwalResponse> getJadwal();
 
-    @FormUrlEncoded
+    @Multipart
     @POST("tambahAntrian")
-    public Call<DaftarAntrianResponse> getAntrian(
-            @Field("tgl_periksa") String tgl_periksa,
-            @Field("urutan_antrian") String urutan_antrian,
-            @Field("status_cek") String status_cek,
-            @Field("id_pasien") String id_pasien,
-            @Field("id_poli") String id_poli
+    public Call<MessageResponse> tambahAntrian(
+            @Part("idPasien") RequestBody idPasien,
+            @Part("tanggalPeriksa") RequestBody tanggalPeriksa,
+            @Part("idPoli") RequestBody idPoli
     );
 
 

@@ -1,6 +1,6 @@
 package com.example.asus.klinikparadise.ApiConfig;
 
-import java.util.concurrent.TimeUnit;
+import com.facebook.stetho.okhttp3.StethoInterceptor;
 
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
@@ -17,8 +17,10 @@ public class RetrofitClient {
         HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
         interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
         OkHttpClient client = new OkHttpClient.Builder()
-                .connectTimeout(20000, TimeUnit.SECONDS)
-                .readTimeout(20000,TimeUnit.SECONDS).build();
+                .addInterceptor(interceptor)
+                .addNetworkInterceptor(new StethoInterceptor())
+                .build();
+
         if (retrofit == null){
             retrofit = new Retrofit.Builder()
                     .baseUrl(baseUrl)

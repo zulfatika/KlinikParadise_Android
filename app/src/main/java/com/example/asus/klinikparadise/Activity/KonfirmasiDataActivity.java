@@ -4,23 +4,22 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.BaseAdapter;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.asus.klinikparadise.Adapter.SpinnerAdapter;
 import com.example.asus.klinikparadise.Adapter.SpinnerItem;
 import com.example.asus.klinikparadise.ApiConfig.BaseApiService;
 import com.example.asus.klinikparadise.ApiConfig.UtilApi;
-import com.example.asus.klinikparadise.Modal.LIstPoliResponse;
 import com.example.asus.klinikparadise.Modal.ListJadwalResponse;
+import com.example.asus.klinikparadise.Modal.MessageResponse;
 import com.example.asus.klinikparadise.R;
 import com.example.asus.klinikparadise.Tool.PrefManager;
 import com.google.android.gms.appindexing.Action;
@@ -28,12 +27,12 @@ import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.appindexing.Thing;
 import com.google.android.gms.common.api.GoogleApiClient;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 
+import okhttp3.MediaType;
+import okhttp3.RequestBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -50,7 +49,8 @@ public class KonfirmasiDataActivity extends AppCompatActivity {
 
     private int idJadwal = 0;
     private int idPoli = 0;
-    private Date datenow = null;
+    private String datenow = null;
+    private PrefManager pref;
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
@@ -89,23 +89,17 @@ public class KonfirmasiDataActivity extends AppCompatActivity {
         btnDaftar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(KonfirmasiDataActivity.this, DetailAntrianActivity.class);
-                startActivity(intent);
-                finish();
+                tambahpemesanan();
+
             }
         });
 
         Date tanggal_sekarang = Calendar.getInstance().getTime();
-        SimpleDateFormat dateFormat = new SimpleDateFormat("dd-mm-YYYY");
-        try {
-            datenow = dateFormat.parse(tanggal_sekarang.toString());
-            tglPemeriksaan.setText(datenow.toString());
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
+        datenow = (tanggal_sekarang.getYear() + 1900) + "-" + checkTen(tanggal_sekarang.getMonth() + 1) + "-" + checkTen(tanggal_sekarang.getDate());
+        tglPemeriksaan.setText(datenow);
 
-        PrefManager pref = new PrefManager(getApplicationContext());
-        nomerPasien.setText(pref.getIdUser());
+        pref = new PrefManager(getApplicationContext());
+        nomerPasien.setText(pref.getKeyNik());
         namaPasien.setText(pref.getNameUser());
         poliTujuan.setText(getIntent().getExtras().getString("nama_poli"));
 
@@ -123,6 +117,44 @@ public class KonfirmasiDataActivity extends AppCompatActivity {
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
 
+            }
+        });
+    }
+
+    private void tambahpemesanan() {
+        final ProgressDialog progressDialog = new ProgressDialog(this);
+        progressDialog.setMessage("Loading...");
+        progressDialog.show();
+
+        RequestBody reIdUser = RequestBody.create(MediaType.parse("text/plain"), pref.getIdUser());
+        RequestBody reDate = RequestBody.create(MediaType.parse("text/plain"), datenow);
+        RequestBody rePoli = RequestBody.create(MediaType.parse("text/plain"), String.valueOf(idPoli));
+
+        BaseApiService mApiService = UtilApi.getAPIService();
+        mApiService.tambahAntrian(reIdUser, reDate, rePoli)
+        .enqueue(new Callback<MessageResponse>() {
+            @Override
+            public void onResponse(Call<MessageResponse> call, Response<MessageResponse> response) {
+                Toast.makeText(mContext, "Code : " + response.code(), Toast.LENGTH_SHORT).show();
+                if (response.isSuccessful()) {
+                    if (response.body().isStatus()){
+                        Toast.makeText(mContext, response.body().getMessage(), Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(KonfirmasiDataActivity.this, DetailAntrianActivity.class);
+                        startActivity(intent);
+                        finish();
+                    }else {
+                        Toast.makeText(mContext, response.body().getMessage(), Toast.LENGTH_SHORT).show();
+                    }
+                } else {
+//                    Toast.makeText(mContext, "Gagal connect ke server", Toast.LENGTH_SHORT).show();
+                }
+                progressDialog.hide();
+                spinnerAdapter.notifyDataSetChanged();
+            }
+
+            @Override
+            public void onFailure(Call<MessageResponse> call, Throwable t) {
+                Log.e("Data", "data : " + t);
             }
         });
     }
@@ -191,6 +223,15 @@ public class KonfirmasiDataActivity extends AppCompatActivity {
         client.connect();
         AppIndex.AppIndexApi.start(client, getIndexApiAction());
     }
+
+    private String checkTen(int value){
+        if (value < 10){
+            return "0" + value;
+        }else {
+            return String.valueOf(value);
+        }
+    }
+
 
     @Override
     public void onStop() {
