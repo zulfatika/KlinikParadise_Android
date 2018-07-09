@@ -1,11 +1,12 @@
 package com.example.asus.klinikparadise.Activity;
 
+import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 
 import com.example.asus.klinikparadise.R;
 
@@ -29,19 +30,19 @@ public class HistoryActivity extends AppCompatActivity {
         tabLayout.setupWithViewPager(viewPager);
     }
 
-    /*public void setupViewPager(ViewPager upViewPager) {
+    public void setupViewPager(ViewPager upViewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addFragment(new SaatIniFragment(), "Saat Ini");
-        adapter.addFragment(new RiwayatFragment(), "Riwayat History");
+        adapter.addFrag(new SaatIniFragment(), "Saat Ini");
+        adapter.addFrag(new RiwayatFragment(), "Riwayat History");
         viewPager.setAdapter(adapter);
-    }*/
+    }
 
-    private class ViewPagerAdapter extends FragmentPagerAdapter {
+    class ViewPagerAdapter extends FragmentPagerAdapter {
         private final List<Fragment> mFragmentList = new ArrayList<>();
         private final List<String> mFragmentTitleList = new ArrayList<>();
 
-        public ViewPagerAdapter(android.support.v4.app.FragmentManager supportFragmentManager) {
-            super(supportFragmentManager);
+        public ViewPagerAdapter(FragmentManager manager) {
+            super(manager);
         }
 
         @Override
@@ -54,7 +55,7 @@ public class HistoryActivity extends AppCompatActivity {
             return mFragmentList.size();
         }
 
-        public void addFragment(Fragment fragment, String title) {
+        public void addFrag(Fragment fragment, String title) {
             mFragmentList.add(fragment);
             mFragmentTitleList.add(title);
         }

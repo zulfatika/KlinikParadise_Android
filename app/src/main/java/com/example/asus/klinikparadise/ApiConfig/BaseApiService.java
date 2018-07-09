@@ -1,11 +1,13 @@
 package com.example.asus.klinikparadise.ApiConfig;
 
+import com.example.asus.klinikparadise.Modal.HistoryResponse;
 import com.example.asus.klinikparadise.Modal.LIstPoliResponse;
 import com.example.asus.klinikparadise.Modal.ListJadwalResponse;
 import com.example.asus.klinikparadise.Modal.LoginResponse;
 import com.example.asus.klinikparadise.Modal.MessageResponse;
 import com.example.asus.klinikparadise.Modal.ProfileResponse;
 import com.example.asus.klinikparadise.Modal.RegistResponse;
+import com.example.asus.klinikparadise.Modal.SaatIniResponse;
 
 import okhttp3.RequestBody;
 import retrofit2.Call;
@@ -78,5 +80,15 @@ public interface BaseApiService {
     );
 
 
+    @Multipart
+    @POST("tambahAntrian")
+    public Call<SaatIniResponse> antrianSaatIni(
+            @Part("idPasien") RequestBody idPasien
+    );
 
+    @Multipart
+    @POST("tambahAntrian")
+    public Call<HistoryResponse> riwayatAntrian(
+            @Part("idPasien") RequestBody idPasien
+    );
 }

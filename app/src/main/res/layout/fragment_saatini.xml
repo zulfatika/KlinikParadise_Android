@@ -1,36 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ffff">
 
     <LinearLayout
+        android:id="@+id/bg_antrian"
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="No. Antrian Anda :"
-            android:textStyle="bold"
-            android:textSize="16sp"
-            android:padding="15dp"/>
-
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/recycle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-
-        <Button
-            android:id="@+id/btnTambah"
-            android:layout_width="170dp"
-            android:layout_height="55dp"
-            android:text="Tambah Antrian"
-            android:layout_marginRight="20dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="10dp"
-            android:layout_gravity="right" />
+        android:layout_height="wrap_content">
 
         <TextView
             android:layout_width="match_parent"
@@ -58,7 +36,7 @@
                 android:gravity="center">
 
                 <TextView
-                    android:id="@+id/urutAntrianUmum"
+                    android:id="@+id/txtPoliUmum"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -86,7 +64,7 @@
                 android:gravity="center">
 
                 <TextView
-                    android:id="@+id/urutAntrianGigi"
+                    android:id="@+id/txtPoliGigi"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -114,7 +92,7 @@
                 android:gravity="center">
 
                 <TextView
-                    android:id="@+id/urutAntrianKecantikan"
+                    android:id="@+id/txtPolikecantikan"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -130,5 +108,32 @@
                     android:textSize="15dp"/>
             </LinearLayout>
         </LinearLayout>
+
     </LinearLayout>
-</ScrollView>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_below="@id/bg_antrian"
+        android:id="@+id/bg_recycle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No. Antrian Anda :"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:padding="15dp"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

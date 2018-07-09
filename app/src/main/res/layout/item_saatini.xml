@@ -8,7 +8,7 @@
     android:clickable="false">
 
     <LinearLayout
-        android:id="@+id/item_saatini"
+        android:id="@+id/item_saat_ini"
         android:layout_width="match_parent"
         android:layout_height="90dp"
         android:clickable="true"
@@ -25,7 +25,7 @@
                 android:text="1"
                 android:paddingLeft="25dp"
                 android:paddingRight="10dp"
-                android:id="@+id/nomorAntrian"
+                android:id="@+id/txtNomer"
                 android:layout_gravity="center"
                 android:textSize="25sp" />
         </LinearLayout>
@@ -47,7 +47,7 @@
                 android:weightSum="2">
 
                 <TextView
-                    android:id="@+id/textPoli"
+                    android:id="@+id/txtPoli"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1.45"
@@ -56,7 +56,7 @@
                     android:textSize="15sp" />
 
                 <TextView
-                    android:id="@+id/textTgl"
+                    android:id="@+id/txtTanggal"
                     android:layout_weight="0.6"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
@@ -66,7 +66,7 @@
             </LinearLayout>
 
             <TextView
-                android:id="@+id/textJadwal"
+                android:id="@+id/txtJadwal"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"

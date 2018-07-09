@@ -27,7 +27,7 @@
             android:padding="10dp">
 
             <TextView
-                android:id="@+id/textTgl"
+                android:id="@+id/txtTanggal"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
@@ -37,7 +37,7 @@
                 android:layout_marginLeft="15dp"/>
 
             <TextView
-                android:id="@+id/textPoli"
+                android:id="@+id/txtPoli"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
@@ -47,7 +47,7 @@
                 android:textSize="15sp" />
 
             <TextView
-                android:id="@+id/textJadwal"
+                android:id="@+id/txtJadwal"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
@@ -66,7 +66,7 @@
             android:gravity="center">
 
             <TextView
-                android:id="@+id/textStatus"
+                android:id="@+id/txtStatus"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
