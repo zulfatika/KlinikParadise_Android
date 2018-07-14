@@ -68,7 +68,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         String deviceToken = FirebaseInstanceId.getInstance().getToken();
 
         mApiService.user_login(
-                edt_nik.getText().toString(),edt_password.getText().toString(), deviceTokeng)
+                edt_nik.getText().toString(),edt_password.getText().toString(), deviceToken)
                 .enqueue(new Callback<LoginResponse>() {
                     @Override
                     public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
