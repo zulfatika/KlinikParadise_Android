@@ -17,6 +17,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Nomor Kartu Pasien"
+            android:textColor="@android:color/black"
             android:textSize="17sp"
             android:paddingLeft="25dp"
             android:paddingTop="20dp"/>
@@ -39,6 +40,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Nama Pasien"
+            android:textColor="@android:color/black"
             android:textSize="17sp"
             android:paddingLeft="25dp"
             android:paddingTop="13dp"/>
@@ -61,6 +63,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Tanggal Pemeriksaan"
+            android:textColor="@android:color/black"
             android:textSize="17sp"
             android:paddingLeft="25dp"
             android:paddingTop="13dp"/>
@@ -84,6 +87,7 @@
             android:layout_height="wrap_content"
             android:text="Jadwal Periksa"
             android:textSize="17sp"
+            android:textColor="@android:color/black"
             android:paddingLeft="25dp"
             android:paddingTop="13dp"/>
 
@@ -110,6 +114,7 @@
             android:layout_height="wrap_content"
             android:text="Poli Tujuan"
             android:textSize="17sp"
+            android:textColor="@android:color/black"
             android:paddingLeft="25dp"
             android:paddingTop="13dp"/>
 

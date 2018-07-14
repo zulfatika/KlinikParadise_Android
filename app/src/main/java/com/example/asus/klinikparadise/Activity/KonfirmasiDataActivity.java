@@ -128,10 +128,11 @@ public class KonfirmasiDataActivity extends AppCompatActivity {
 
         RequestBody reIdUser = RequestBody.create(MediaType.parse("text/plain"), pref.getIdUser());
         RequestBody reDate = RequestBody.create(MediaType.parse("text/plain"), datenow);
+        RequestBody rejadwal = RequestBody.create(MediaType.parse("text/plain"), String.valueOf(idJadwal));
         RequestBody rePoli = RequestBody.create(MediaType.parse("text/plain"), String.valueOf(idPoli));
 
         BaseApiService mApiService = UtilApi.getAPIService();
-        mApiService.tambahAntrian(reIdUser, reDate, rePoli)
+        mApiService.tambahAntrian(reIdUser, reDate, rePoli, rejadwal)
         .enqueue(new Callback<MessageResponse>() {
             @Override
             public void onResponse(Call<MessageResponse> call, Response<MessageResponse> response) {

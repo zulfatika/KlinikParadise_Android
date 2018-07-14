@@ -33,7 +33,7 @@
         <activity android:name=".Activity.ProfileActivity" />
         <activity android:name=".Activity.PanduanActivity" />
         <activity android:name=".Activity.TentangActivity" />
-        <activity android:name=".Activity.ContactActivity" />
+        <activity android:name=".Activity.InfoActivity" />
         <!--
  ATTENTION: This was auto-generated to add Google Play services to your project for
      App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
@@ -42,7 +42,10 @@
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
 
-        <activity android:name=".Activity.HistoryActivity"></activity>
+        <activity android:name=".Activity.HistoryActivity" />
+        <activity
+            android:name=".SettingsActivity"
+            android:label="@string/title_activity_settings"></activity>
     </application>
 
 </manifest>

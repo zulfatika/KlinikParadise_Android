@@ -17,5 +17,6 @@ public class HistoryResponse {
         public int urutan_antrian;
         public int status_cek;
         public String nama_poli;
+        public String shift_klinik;
     }
 }

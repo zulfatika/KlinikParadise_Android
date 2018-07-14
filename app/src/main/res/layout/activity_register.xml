@@ -73,7 +73,7 @@
                         android:ems="10"
                         android:hint="Nama Pasien"
                         android:inputType="textPersonName"
-                        android:textColor="#909090"
+                        android:textColor="@android:color/black"
                         android:textColorHint="#909090" />
                 </LinearLayout>
 
@@ -103,7 +103,7 @@
                         android:layout_gravity="center"
                         android:hint="Password"
                         android:inputType="textPassword"
-                        android:textColor="#909090"
+                        android:textColor="@android:color/black"
                         android:textColorHint="#909090" />
                 </LinearLayout>
 
@@ -134,7 +134,7 @@
                         android:layout_gravity="center"
                         android:hint="NIK"
                         android:inputType="textPersonName"
-                        android:textColor="#909090"
+                        android:textColor="@android:color/black"
                         android:textColorHint="#909090" />
                 </LinearLayout>
 
@@ -166,7 +166,7 @@
                         android:ems="10"
                         android:hint="Tempat Lahir"
                         android:inputType="textPersonName"
-                        android:textColor="#909090"
+                        android:textColor="@android:color/black"
                         android:textColorHint="#909090" />
                 </LinearLayout>
 
@@ -197,7 +197,7 @@
                         android:ems="10"
                         android:hint="Tanggal Lahir"
                         android:inputType="textPersonName"
-                        android:textColor="#909090"
+                        android:textColor="@android:color/black"
                         android:textColorHint="#909090" />
                 </LinearLayout>
 
@@ -228,7 +228,7 @@
                         android:text="Jenis Kelamin"
                         android:textSize="18sp"
                         android:inputType="textPersonName"
-                        android:textColor="#909090"/>
+                        android:textColor="@android:color/black"/>
                 </LinearLayout>
 
                 <RadioGroup
@@ -290,7 +290,7 @@
                         android:ems="10"
                         android:hint="Alamat"
                         android:inputType="textPersonName"
-                        android:textColor="#909090"
+                        android:textColor="@android:color/black"
                         android:textColorHint="#909090" />
                 </LinearLayout>
 
@@ -321,7 +321,7 @@
                         android:layout_gravity="center"
                         android:hint="Nomor Telepon"
                         android:inputType="textPersonName"
-                        android:textColor="#909090"
+                        android:textColor="@android:color/black"
                         android:textColorHint="#909090" />
                 </LinearLayout>
 
@@ -351,7 +351,7 @@
                         android:ems="10"
                         android:hint="Riwayat Alergi"
                         android:inputType="textPersonName"
-                        android:textColor="#909090"
+                        android:textColor="@android:color/black"
                         android:textColorHint="#909090" />
                 </LinearLayout>
             </LinearLayout>

@@ -22,6 +22,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="NIK"
+                android:textColor="@android:color/black"
                 android:textSize="16sp"
                 android:paddingLeft="25dp"
                 android:paddingTop="15dp"/>
@@ -30,7 +31,8 @@
                 android:id="@+id/edtNIK"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint=""
+                android:text=""
+                android:textColor="#909090"
                 android:textSize="15dp"
                 android:layout_marginLeft="25dp"
                 android:layout_marginRight="25dp"
@@ -44,6 +46,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Nama Pasien"
+                android:textColor="@android:color/black"
                 android:textSize="16sp"
                 android:paddingLeft="25dp"
                 android:paddingTop="15dp"/>
@@ -52,7 +55,8 @@
                 android:id="@+id/edtName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint=""
+                android:text=""
+                android:textColor="#909090"
                 android:textSize="15dp"
                 android:layout_marginLeft="25dp"
                 android:layout_marginRight="25dp"
@@ -66,6 +70,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Alamat"
+                android:textColor="@android:color/black"
                 android:textSize="16sp"
                 android:paddingLeft="25dp"
                 android:paddingTop="10dp"/>
@@ -74,7 +79,8 @@
                 android:id="@+id/edtAlamat"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint=""
+                android:text=""
+                android:textColor="#909090"
                 android:textSize="15dp"
                 android:layout_marginLeft="25dp"
                 android:layout_marginRight="25dp"
@@ -88,6 +94,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Tempat Lahir"
+                android:textColor="@android:color/black"
                 android:textSize="16sp"
                 android:paddingLeft="25dp"
                 android:paddingTop="10dp"/>
@@ -96,7 +103,8 @@
                 android:id="@+id/edtTempatLahir"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint=""
+                android:text=""
+                android:textColor="#909090"
                 android:textSize="15dp"
                 android:layout_marginLeft="25dp"
                 android:layout_marginRight="25dp"
@@ -110,6 +118,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Tanggal Lahir"
+                android:textColor="@android:color/black"
                 android:textSize="16sp"
                 android:paddingLeft="25dp"
                 android:paddingTop="10dp"/>
@@ -118,7 +127,7 @@
                 android:id="@+id/edtTanggalLahir"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint=""
+                android:text=""
                 android:textSize="15dp"
                 android:layout_marginLeft="25dp"
                 android:layout_marginRight="25dp"
@@ -132,6 +141,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="No. Telp"
+                android:textColor="@android:color/black"
                 android:textSize="16sp"
                 android:paddingLeft="25dp"
                 android:paddingTop="10dp"/>
@@ -140,7 +150,8 @@
                 android:id="@+id/edtNoTelp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint=""
+                android:text=""
+                android:textColor="#909090"
                 android:textSize="15dp"
                 android:layout_marginLeft="25dp"
                 android:layout_marginRight="25dp"
@@ -167,9 +178,9 @@
                     android:background="@android:color/transparent"
                     android:ems="10"
                     android:text="Jenis Kelamin"
+                    android:textColor="@android:color/black"
                     android:textSize="17sp"
-                    android:inputType="textPersonName"
-                    android:textColor="#909090"/>
+                    android:inputType="textPersonName"/>
             </LinearLayout>
 
             <RadioGroup
@@ -209,6 +220,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Riwayat Alergi"
+                android:textColor="@android:color/black"
                 android:textSize="16sp"
                 android:paddingLeft="25dp"
                 android:paddingTop="10dp"/>
@@ -217,7 +229,8 @@
                 android:id="@+id/edtRiwayatAlergi"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint=""
+                android:text=""
+                android:textColor="#909090"
                 android:textSize="15dp"
                 android:layout_marginLeft="25dp"
                 android:layout_marginRight="25dp"

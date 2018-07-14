@@ -27,14 +27,17 @@ public class HistoryActivity extends AppCompatActivity {
         //setupViewPager(viewPager);
 
         tabLayout = (TabLayout) findViewById(R.id.tabLayout);
+        setupViewPager(viewPager);
         tabLayout.setupWithViewPager(viewPager);
+
     }
 
     public void setupViewPager(ViewPager upViewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
         adapter.addFrag(new SaatIniFragment(), "Saat Ini");
         adapter.addFrag(new RiwayatFragment(), "Riwayat History");
-        viewPager.setAdapter(adapter);
+        upViewPager.setAdapter(adapter);
+        upViewPager.setCurrentItem(0);
     }
 
     class ViewPagerAdapter extends FragmentPagerAdapter {

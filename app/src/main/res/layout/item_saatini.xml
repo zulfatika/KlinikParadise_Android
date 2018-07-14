@@ -12,12 +12,14 @@
         android:layout_width="match_parent"
         android:layout_height="90dp"
         android:clickable="true"
-        android:orientation="horizontal"
-        android:background="@android:color/white">
+        android:background="#eeeeee"
+        android:weightSum="2"
+        android:orientation="horizontal">
 
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_weight="0.1">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -27,13 +29,14 @@
                 android:paddingRight="10dp"
                 android:id="@+id/txtNomer"
                 android:layout_gravity="center"
+                android:textColor="@android:color/black"
                 android:textSize="25sp" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="6.5"
+            android:layout_weight="1.9"
             android:orientation="vertical"
             android:padding="10dp">
 
@@ -50,14 +53,14 @@
                     android:id="@+id/txtPoli"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1.45"
+                    android:layout_weight="1.3"
                     android:text="Poli Umum"
                     android:gravity="fill"
-                    android:textSize="15sp" />
+                    android:textSize="15sp"/>
 
                 <TextView
                     android:id="@+id/txtTanggal"
-                    android:layout_weight="0.6"
+                    android:layout_weight="0.7"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:gravity="fill"

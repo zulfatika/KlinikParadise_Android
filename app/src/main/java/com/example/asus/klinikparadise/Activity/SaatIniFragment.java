@@ -73,8 +73,8 @@ public class SaatIniFragment extends Fragment {
                                 TextView tanggal = view.findViewById(R.id.txtTanggal);
                                 TextView poli = view.findViewById(R.id.txtPoli);
 
-                                nomer.setText(data.urutan_antrian);
-                                jadwal.setText("kosong");
+                                nomer.setText(data.urutan_antrian + "");
+                                jadwal.setText(data.shift_klinik);
                                 tanggal.setText(data.tgl_periksa);
                                 poli.setText(data.nama_poli);
 
@@ -117,9 +117,12 @@ public class SaatIniFragment extends Fragment {
                                 if (response.body().data != null){
                                     datas.add(response.body().data);
                                 }
-                                jmlAntrianGigi.setText(response.body().gigi.urutan_antrian);
-                                jmlAntrianKecantikan.setText(response.body().kecantikan.urutan_antrian);
-                                jmlAntrianUmum.setText(response.body().umum.urutan_antrian);
+                                if (response.body().kecantikan != null)
+                                    jmlAntrianKecantikan.setText(response.body().kecantikan.urutan_antrian + "");
+                                if (response.body().gigi != null)
+                                    jmlAntrianGigi.setText(response.body().gigi.urutan_antrian + "");
+                                if (response.body().umum != null)
+                                    jmlAntrianUmum.setText(response.body().umum.urutan_antrian + "");
                             }else {
                                 Toast.makeText(view.getContext(), response.body().message, Toast.LENGTH_SHORT).show();
                             }

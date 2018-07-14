@@ -76,18 +76,19 @@ public interface BaseApiService {
     public Call<MessageResponse> tambahAntrian(
             @Part("idPasien") RequestBody idPasien,
             @Part("tanggalPeriksa") RequestBody tanggalPeriksa,
-            @Part("idPoli") RequestBody idPoli
+            @Part("idPoli") RequestBody idPoli,
+            @Part("idJadwal") RequestBody idJadwal
     );
 
 
     @Multipart
-    @POST("tambahAntrian")
+    @POST("detailAntrian")
     public Call<SaatIniResponse> antrianSaatIni(
             @Part("idPasien") RequestBody idPasien
     );
 
     @Multipart
-    @POST("tambahAntrian")
+    @POST("history")
     public Call<HistoryResponse> riwayatAntrian(
             @Part("idPasien") RequestBody idPasien
     );

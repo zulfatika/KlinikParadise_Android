@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -53,22 +54,21 @@ public class RiwayatFragment extends Fragment {
             parent.removeView(view);
         }
 
-        recyclerView = (RecyclerView)view.findViewById(R.id.recycle);
+        recyclerView = (RecyclerView) view.findViewById(R.id.recycle);
         manager = new LinearLayoutManager(view.getContext(), LinearLayoutManager.VERTICAL, false);
         recyclerView.setLayoutManager(manager);
         adapter = SlimAdapter.create()
                 .register(R.layout.item_riwayat, new SlimInjector<HistoryResponse.Antrian>() {
                     @Override
                     public void onInject(final HistoryResponse.Antrian data, IViewInjector injector) {
-                        injector.with(R.id.item_saat_ini, new IViewInjector.Action() {
+                        injector.with(R.id.item_riwayat, new IViewInjector.Action() {
                             @Override
                             public void action(View view) {
-                                TextView nomer = view.findViewById(R.id.txtNomer);
                                 TextView jadwal  = view.findViewById(R.id.txtJadwal);
                                 TextView tanggal = view.findViewById(R.id.txtTanggal);
                                 TextView poli = view.findViewById(R.id.txtPoli);
                                 TextView status = view.findViewById(R.id.txtStatus);
-                                Button btnHapus = view.findViewById(R.id.btnDelete);
+                                ImageButton btnHapus = view.findViewById(R.id.btnDelete);
 
                                 if (data.status_cek == 0){
                                     status.setText("Belum di panggil");
@@ -78,8 +78,7 @@ public class RiwayatFragment extends Fragment {
                                     status.setText("Selesai di panggil");
                                 }
 
-                                nomer.setText(data.urutan_antrian);
-                                jadwal.setText("kosong");
+                                jadwal.setText(data.shift_klinik);
                                 tanggal.setText(data.tgl_periksa);
                                 poli.setText(data.nama_poli);
 
