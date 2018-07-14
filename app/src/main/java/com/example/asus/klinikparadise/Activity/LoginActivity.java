@@ -2,8 +2,8 @@ package com.example.asus.klinikparadise.Activity;
 
 import android.content.Context;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -14,6 +14,7 @@ import com.example.asus.klinikparadise.ApiConfig.UtilApi;
 import com.example.asus.klinikparadise.Modal.LoginResponse;
 import com.example.asus.klinikparadise.R;
 import com.example.asus.klinikparadise.Tool.PrefManager;
+import com.google.firebase.iid.FirebaseInstanceId;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -63,6 +64,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     }
 
     private void onLogin(){
+
+        String deviceToken = FirebaseInstanceId.getInstance().getToken();
+
         mApiService.user_login(
                 edt_nik.getText().toString(),edt_password.getText().toString())
                 .enqueue(new Callback<LoginResponse>() {
