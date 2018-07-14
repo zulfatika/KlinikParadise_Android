@@ -28,7 +28,8 @@ public interface BaseApiService {
     @POST("pasien/login")
     public Call<LoginResponse> user_login(
             @Field("nik") String nik,
-            @Field("password") String password
+            @Field("password") String password,
+            @Field("token") String token
     );
 
     @FormUrlEncoded
