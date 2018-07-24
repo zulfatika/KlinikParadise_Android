@@ -7,7 +7,8 @@ import java.util.List;
  */
 
 public class LIstPoliResponse {
-    public String status;
+    public boolean status;
+    public String message;
     public List<Poli> data;
 
     public class Poli{

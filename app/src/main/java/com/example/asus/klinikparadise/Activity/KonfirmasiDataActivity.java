@@ -136,7 +136,6 @@ public class KonfirmasiDataActivity extends AppCompatActivity {
         .enqueue(new Callback<MessageResponse>() {
             @Override
             public void onResponse(Call<MessageResponse> call, Response<MessageResponse> response) {
-                Toast.makeText(mContext, "Code : " + response.code(), Toast.LENGTH_SHORT).show();
                 if (response.isSuccessful()) {
                     if (response.body().isStatus()){
                         Toast.makeText(mContext, response.body().getMessage(), Toast.LENGTH_SHORT).show();
@@ -180,10 +179,15 @@ public class KonfirmasiDataActivity extends AppCompatActivity {
                         Log.e("Response", response.message() + response.code());
                         if (response.isSuccessful()) {
                             Log.e("Data", "data : Sukses");
-                            if (response.body().data.size() != 0) {
-                                for (ListJadwalResponse.Jadwal poli : response.body().data) {
-                                    spinnerItems.add(new SpinnerItem(poli.id_jadwalklinik, poli.shift_klinik + " (" + poli.jam_buka + " - " + poli.jam_tutup + ")"));
+                            if (response.body().status){
+                                if (response.body().data.size() != 0) {
+                                    for (ListJadwalResponse.Jadwal poli : response.body().data) {
+                                        spinnerItems.add(new SpinnerItem(poli.id_jadwalklinik, poli.shift_klinik + " (" + poli.jam_buka + " - " + poli.jam_tutup + ")"));
+                                    }
                                 }
+                            }else {
+                                Toast.makeText(mContext, response.body().message, Toast.LENGTH_SHORT).show();
+                                finish();
                             }
                         } else {
                             Log.e("Data", "data : Gagal");

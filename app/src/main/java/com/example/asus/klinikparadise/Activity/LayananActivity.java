@@ -82,14 +82,13 @@ public class LayananActivity extends AppCompatActivity {
                     @Override
                     public void onResponse(Call<LIstPoliResponse> call, Response<LIstPoliResponse> response) {
                         Log.e("Data", "data : Proses");
-                        Log.e("Response", response.message() + response.code());
                         if (response.isSuccessful()){
                             Log.e("Data", "data : Sukses");
-                            if (response.body().data.size() != 0) {
-                                for (LIstPoliResponse.Poli poli : response.body().data) {
-                                    listPoli.add(poli);
+                                if (response.body().data.size() != 0) {
+                                    for (LIstPoliResponse.Poli poli : response.body().data) {
+                                        listPoli.add(poli);
+                                    }
                                 }
-                            }
                         }else {
                             Log.e("Data", "data : Gagal");
                         }

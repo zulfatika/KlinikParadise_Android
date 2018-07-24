@@ -7,7 +7,8 @@ import java.util.List;
  */
 
 public class ListJadwalResponse {
-    public String status;
+    public boolean status;
+    public String message;
     public List<Jadwal> data;
 
     public class Jadwal{

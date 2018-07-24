@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "243707958312",
+    "firebase_url": "https://klinik-paradise.firebaseio.com",
+    "project_id": "klinik-paradise",
+    "storage_bucket": "klinik-paradise.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:243707958312:android:f5c5d66a0fabd688",
+        "android_client_info": {
+          "package_name": "com.example.asus.klinikparadise"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "243707958312-g994lqclao4ogasrqnug1qrselud5c1c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB-HYEfNV8dI9X1C3ZHhIjvNwN99hJ8tbs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

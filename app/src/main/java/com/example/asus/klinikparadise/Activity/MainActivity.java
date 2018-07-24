@@ -15,7 +15,6 @@ public class MainActivity extends AppCompatActivity {
     LinearLayout tentang;
     LinearLayout info;
     LinearLayout profil;
-    LinearLayout settings;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,9 +25,8 @@ public class MainActivity extends AppCompatActivity {
         history = (LinearLayout)findViewById(R.id.history);
         panduan = (LinearLayout)findViewById(R.id.panduan);
         tentang = (LinearLayout)findViewById(R.id.tentang);
-        info = (LinearLayout)findViewById(R.id.info);
+        info = (LinearLayout)findViewById(R.id.infoLayanan);
         profil = (LinearLayout)findViewById(R.id.profil);
-        settings = (LinearLayout)findViewById(R.id.settings);
 
         daftar_periksa.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -71,14 +69,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
         profil.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view){
-                Intent intent = new Intent(MainActivity.this, ProfileActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        settings.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
                 Intent intent = new Intent(MainActivity.this, ProfileActivity.class);
